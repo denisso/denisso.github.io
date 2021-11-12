@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <select id="select1">
+        <option>01. White #FFFFFF 255, 255, 255</option>
+        <option>02. Black #000000 0, 0, 0</option>
+        <option>03. IndianRed #CD5C5C 205, 92, 92</option>
+        <option>04. Blue #0000FF 0, 0, 255</option>
+        <option>05. Silver #C0C0C0 192, 192, 192</option>
+        <option>06. Red #FF0000 255, 0, 0</option>
+        <option>07. Yellow #FFFF00 255, 255, 0</option>
+        <option>08. Fuchsia #FF00FF 255, 0, 255</option>
+        <option>09. Green #008000 0, 128, 0</option>
+        <option>10. Aqua #00FFFF 0, 255, 255</option>
+        <option>11. GreenYellow #ADFF2F 173, 255, 47</option>
+        <option>12. MediumSpringGreen #00FA9A 0, 250, 154</option>
+    </select>
+    <script>
+    [...select1.options].forEach(e => {
+        const s = e.style
+        s.color = s.backgroundColor = /#(?:[0-9a-fA-F]{3}){1,2}/.exec(e.innerHTML)
+    })
+    </script>
+</body>
+
+</html>
